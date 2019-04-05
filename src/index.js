@@ -8,6 +8,7 @@ import Routes from './router';
 import '../style/materialize.css';
 import '../style/react-range.css';
 import '../style/style.css';
+import '../style/slider.css';
 
 const App = () => {
   const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
@@ -20,3 +21,4 @@ const App = () => {
 };
 
 ReactDOM.render(<App />, document.getElementById('root'));
+// serviceWorker.unregister();

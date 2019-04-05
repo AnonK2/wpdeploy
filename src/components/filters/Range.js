@@ -1,24 +1,33 @@
 import React, { Component } from 'react';
 import Slider from 'react-input-range';
-
 class Range extends Component {
-  onChange(component, values) {
-    const { input: { onChange } } = this.props;
+  constructor(props) {
+    // Required step: always call the parent class' constructor
+    super(props);
 
-    onChange(values);
+    this.state = { value: 0 }
   }
 
+  onChange = (val) => {
+
+    // TODO: fix this!!!
+    // this.props.input.value = values;
+    this.setState({ value: val });
+  };
+
   render() {
-    const { input: { value } } = this.props;
+    // let { input: { value } } = this.props;
 
     return (
       <div className="range-slider">
         <label>{this.props.label}</label>
         <Slider
-          onChange={this.onChange.bind(this)}
+          onChange={this.onChange}
           minValue={parseInt(this.props.range.min)}
           maxValue={parseInt(this.props.range.max)}
-          value={value || this.props.range}
+          // value={value || this.props.range}
+          value={this.state.value}
+          onChangeComplete={value => console.log(value)}
         />
       </div>
     );

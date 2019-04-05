@@ -1,0 +1,4 @@
+# command (2! => ignore start at 3rd line)
+sed -i -e '2! s/\:[^\,]*//g' ./vendor_libs_replacer
+
+# paste here!
