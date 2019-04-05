@@ -1,4 +1,0 @@
-# github
-git checkout -b gh-pages    # create gh-pages branch and change branch to it
-git checkout master         # change to master branch
-git merge --no-ff --no-commit gh-pages  # merge everthing gb-pages files to current branch
