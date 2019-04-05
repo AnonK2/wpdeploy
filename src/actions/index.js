@@ -106,7 +106,7 @@ export const deleteArtist = (id) => dispatch =>
 const GetAgeRangeProxy = (...args) => {
   const result = GetAgeRange(...args);
   if (!result || !result.then) {
-    return new Promise(() => {});
+    return new Promise(() => { });
   }
   return result;
 };
@@ -114,7 +114,7 @@ const GetAgeRangeProxy = (...args) => {
 const GetYearsActiveRangeProxy = (...args) => {
   const result = GetYearsActiveRange(...args);
   if (!result || !result.then) {
-    return new Promise(() => {});
+    return new Promise(() => { });
   }
   return result;
 };
@@ -122,7 +122,7 @@ const GetYearsActiveRangeProxy = (...args) => {
 const SearchArtistsProxy = (criteria, offset, limit) => {
   const result = SearchArtists(_.omit(criteria, 'sort'), criteria.sort, offset, limit);
   if (!result || !result.then) {
-    return new Promise(() => {});
+    return new Promise(() => { });
   }
   return result;
 };
@@ -130,7 +130,7 @@ const SearchArtistsProxy = (criteria, offset, limit) => {
 const FindArtistProxy = (...args) => {
   const result = FindArtist(...args);
   if (!result || !result.then) {
-    return new Promise(() => {});
+    return new Promise(() => { });
   }
   return result;
 };
@@ -138,7 +138,7 @@ const FindArtistProxy = (...args) => {
 const CreateArtistProxy = (...args) => {
   const result = CreateArtist(...args);
   if (!result || !result.then) {
-    return new Promise(() => {});
+    return new Promise(() => { });
   }
   return result;
 };
@@ -146,7 +146,7 @@ const CreateArtistProxy = (...args) => {
 const EditArtistProxy = (...args) => {
   const result = EditArtist(...args);
   if (!result || !result.then) {
-    return new Promise(() => {});
+    return new Promise(() => { });
   }
   return result;
 };
@@ -154,7 +154,7 @@ const EditArtistProxy = (...args) => {
 const DeleteArtistProxy = (...args) => {
   const result = DeleteArtist(...args);
   if (!result || !result.then) {
-    return new Promise(() => {});
+    return new Promise(() => { });
   }
   return result;
 };
@@ -162,7 +162,7 @@ const DeleteArtistProxy = (...args) => {
 const SetRetiredProxy = (_ids) => {
   const result = SetRetired(_ids);
   if (!result || !result.then) {
-    return new Promise(() => {});
+    return new Promise(() => { });
   }
   return result;
 };
@@ -170,14 +170,13 @@ const SetRetiredProxy = (_ids) => {
 const SetNotRetiredProxy = (_ids) => {
   const result = SetNotRetired(_ids);
   if (!result || !result.then) {
-    return new Promise(() => {});
+    return new Promise(() => { });
   }
   return result;
 };
 
-//
-// Helpers
 
+// Helpers
 const refreshSearch = (dispatch, getState) => {
   const { artists: { offset, limit } } = getState();
   const criteria = getState().form.filters.values;

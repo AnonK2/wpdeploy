@@ -1,1 +1,12 @@
+# surge
+# to destroy: surge teardown
 surge -p dist/
+
+# github
+git checkout -b gh-pages
+git subtree push --prefix dist origin gh-pages  # push only dist/
+
+# aws s3
+# create "security credential" in aws website, then save it to .env(accessKeyId and secret)
+s3-website create webpack-deploy # create bucket
+s3-website deploy dist/          # deploy(next time want to deploy again just run this command)
